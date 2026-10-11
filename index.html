@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinayak Tasks</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">✓</div>
+                <div>
+                    <h2>Vinayak Tasks</h2>
+                    <p>Plan · Do · Achieve</p>
+                </div>
+            </div>
+
+            <nav>
+                <button class="nav-item active" data-view="all">⌂ &nbsp; Home</button>
+                <button class="nav-item" data-view="todo">○ &nbsp; To Do
+                    <span id="todoCount">0</span>
+                </button>
+                <button class="nav-item" data-view="done">☑ &nbsp; Done
+                    <span id="doneCount">0</span>
+                </button>
+            </nav>
+
+            <div class="profile">
+                <div class="avatar">MV</div>
+                <div>
+                    <strong>Malleshwara Vinayak</strong>
+                    <p>Keep going!</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <header class="welcome">
+                <div>
+                    <h1>Good afternoon, Vinayak! 👋</h1>
+                    <p>Small steps make big progress.</p>
+                </div>
+                <div class="date" id="currentDate"></div>
+            </header>
+
+            <!-- Add Task -->
+            <form id="taskForm" class="add-task">
+                <span class="plus">＋</span>
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Add a new task..."
+                    maxlength="150"
+                    required
+                >
+                <button type="submit">Add</button>
+            </form>
+
+            <!-- Task Boards -->
+            <section class="boards">
+
+                <div class="task-board todo-board">
+                    <div class="board-heading">
+                        <h2><span class="todo-symbol">○</span> To Do</h2>
+                        <span class="count" id="boardTodoCount">0</span>
+                    </div>
+                    <div id="todoList" class="task-list"></div>
+                </div>
+
+                <div class="task-board done-board">
+                    <div class="board-heading">
+                        <h2><span class="done-symbol">✓</span> Done</h2>
+                        <span class="count" id="boardDoneCount">0</span>
+                    </div>
+                    <div id="doneList" class="task-list"></div>
+                </div>
+
+            </section>
+
+            <footer>
+                Better habits <span>•</span> Better you ♡
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
